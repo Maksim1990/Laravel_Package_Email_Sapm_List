@@ -1,0 +1,30 @@
+{
+    "name": "maksim_n/email_spam_list",
+    "description": "Convenient e-mail composer spam list package",
+    "authors": [
+        {
+            "name": "Maksim Narushevich",
+            "email": "narushevich.maksim@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Maksim_N\\EmailSpamList\\EmailSpamListServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Maksim_N\\EmailSpamList\\": "/src"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php artisan optimize",
+            "php artisan migrate"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
